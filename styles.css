@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Poppins:wght@200;300;400&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300;1,400&family=Playfair+Display:wght@400;500&display=swap');
 :root {
-	--nav-bg: rgb(1, 101, 100, 0.4);
+	--nav-bg: rgba(0, 0, 0, 0.6);
 	--neutral-shadow: rgb(23, 23, 23);
+	--dark-200: rgb(69, 69, 69);
 	--dark-400: rgb(45, 45, 45);
 	--dark-800: rgb(29, 29, 29);
 
-	--areia-green: rgb(1, 101, 100);
+	--areia-green: rgb(23, 99, 82);
 }
 
 /*
@@ -38,7 +38,7 @@ body {
 body {
 	line-height: 1.5;
 	-webkit-font-smoothing: antialiased;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 }
 /*
   6. Improve media defaults
@@ -96,7 +96,7 @@ a:visited {
 }
 
 p {
-	font-weight: 200;
+	font-weight: 400;
 	font-size: 18px;
 }
 
@@ -190,7 +190,7 @@ footer {
 
 .header-area {
 	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
-		url(/assets/jpegs/green-hero-front.jpg);
+		url(/assets/jpegs/areia-hero.jpg);
 	background-position: center center;
 	background-size: cover;
 }
@@ -212,7 +212,7 @@ footer {
 
 a.site-logo {
 	font-size: 2rem;
-	font-weight: 800;
+	font-weight: 400;
 	text-transform: uppercase;
 	color: #fff;
 	text-decoration: none;
@@ -299,10 +299,11 @@ a.site-logo {
 }
 
 .socials li a {
-	color: var(--dark-400);
+	color: var(--dark-200);
 }
 
-.socials li a:hover {
+.socials li a:hover,
+.socials li a:focus {
 	color: var(--areia-green);
 }
 
