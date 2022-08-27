@@ -1,4 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Poppins:wght@200;300;400&display=swap');
+
+:root {
+	--nav-bg: rgb(1, 101, 100, 0.4);
+	--neutral-shadow: rgb(23, 23, 23);
+	--dark-400: rgb(45, 45, 45);
+	--dark-800: rgb(29, 29, 29);
+
+	--areia-green: rgb(1, 101, 100);
+}
+
 /*
   1. Use a more-intuitive box-sizing model.
 */
@@ -91,7 +101,8 @@ p {
 }
 
 footer {
-	background-color: #444;
+	border: none;
+	background-color: var(--dark-800);
 	padding-inline: 20vw;
 	padding-block: 5vh;
 	color: white;
@@ -107,7 +118,7 @@ footer {
 
 .container {
 	width: 80%;
-	max-width: 940px;
+	max-width: 2880px;
 	margin: 0 auto;
 	padding: 0 15px;
 }
@@ -116,24 +127,28 @@ footer {
 	display: grid;
 	width: 100%;
 	grid-template-rows: repeat(3, auto);
-	background-color: #444;
+	background-color: var(--dark-800);
 }
 
 .article-wrapper {
 	justify-content: center;
 	width: 100vw;
+	height: 100%;
 	padding: 10vh 15vw 15vh 15vw;
+	background-color: var(--dark-400);
 	color: #fff;
+	border: none;
+	position: relative;
 }
 
 .article-wrapper:nth-child(odd) {
-	background-color: #333;
+	background-color: var(--dark-800);
 }
 
 .article-wrapper h2 {
 	font-size: 2.2rem;
 	font-weight: 400;
-	filter: drop-shadow(3px 3px 3px black);
+	filter: drop-shadow(3px 3px 3px var(--neutral-shadow));
 }
 
 .article-wrapper h3 {
@@ -141,7 +156,7 @@ footer {
 	font-weight: 300;
 	margin-top: 5vh;
 	margin-bottom: 2vh;
-	filter: drop-shadow(3px 3px 3px black);
+	filter: drop-shadow(3px 3px 3px var(--neutral-shadow));
 }
 
 .article-wrapper p {
@@ -160,7 +175,7 @@ footer {
 }
 
 #products a img {
-	filter: drop-shadow(5px 5px 5px rgb(29, 29, 29));
+	filter: drop-shadow(5px 5px 5px var(--neutral-shadow));
 }
 
 .product-img {
@@ -175,13 +190,13 @@ footer {
 
 .header-area {
 	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
-		url(https://images.unsplash.com/photo-1657664068979-024361c37572?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDJ8Ym84alFLVGFFMFl8fGVufDB8fHx8&auto=format&fit=crop&w=900&q=60);
+		url(/assets/jpegs/green-hero-front.jpg);
 	background-position: center center;
 	background-size: cover;
 }
 
 .navbar-area {
-	background: rgba(0, 0, 0, 0.6);
+	background: var(--nav-bg);
 	border: none;
 	position: fixed;
 	width: 100%;
@@ -192,6 +207,7 @@ footer {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	border: none;
 }
 
 a.site-logo {
@@ -200,7 +216,6 @@ a.site-logo {
 	text-transform: uppercase;
 	color: #fff;
 	text-decoration: none;
-	margin-left: 1vw;
 }
 
 .site-navbar ul {
@@ -283,6 +298,14 @@ a.site-logo {
 	color: rgba(252, 252, 252, 0.649);
 }
 
+.socials li a {
+	color: var(--dark-400);
+}
+
+.socials li a:hover {
+	color: var(--areia-green);
+}
+
 @media screen and (max-width: 920px) {
 	.container {
 		max-width: 720px;
@@ -310,6 +333,7 @@ a.site-logo {
 		max-height: 0;
 		overflow: hidden;
 		transition: 0.3s;
+		border: none;
 	}
 
 	.site-navbar ul li {
